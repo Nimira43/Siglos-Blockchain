@@ -6,6 +6,9 @@ def mine_block(last_block, data):
   hash = f'{timestamp}-{last_hash}'
   return Block(timestamp, last_hash, hash, data)
 
+def genesis():
+  return Block(1, 'genesis_last_hash', 'genesis_hash', [])
+
 class Block:
   def __init__(self, timestamp, last_hash, hash, data):
     self.timeout = timestamp
