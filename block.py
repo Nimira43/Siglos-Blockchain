@@ -1,9 +1,18 @@
 class Block:
-  def __init__(self, data):
+  def __init__(self, timestamp, last_hash, hash, data):
+    self.timeout = timestamp
+    self.last_hash = last_hash
+    self.hash = hash
     self.data = data
   
   def __repr__(self):
-    return f'Block - data: {self.data}'               
+    return (
+      '*** BLOCK=['
+      f'TIMESTAMP = {self.timestamp}, '
+      f'LAST HASH = {self.last_hash}, '
+      f'HASH = {self.hash}, '
+      f'DATA = {self.data}] '
+    )               
 
 def main():
   block = Block('Block')
