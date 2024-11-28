@@ -18,7 +18,7 @@ class Block:
   
   def __repr__(self):
     return (
-      '*** BLOCK=['
+      '*** BLOCK = ['
       f'TIMESTAMP = {self.timestamp}, '
       f'LAST HASH = {self.last_hash}, '
       f'HASH = {self.hash}, '
