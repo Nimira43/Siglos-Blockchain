@@ -15,5 +15,4 @@ blockchain.add_block('one')
 blockchain.add_block('two') 
 
 print(blockchain)
-
-print(f'lock.p')
+print(f'blockchain.py __name__: {__name__}')
