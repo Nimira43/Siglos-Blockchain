@@ -2,7 +2,7 @@ import time
 
 def mine_block(last_block, data):
   timestamp = time.time_ns()
-  last_hash =last_block.hash
+  last_hash = last_block.hash
   hash = f'{timestamp}-{last_hash}'
   return Block(timestamp, last_hash, hash, data)
 
@@ -11,7 +11,7 @@ def genesis():
 
 class Block:
   def __init__(self, timestamp, last_hash, hash, data):
-    self.timeout = timestamp
+    self.timestamp = timestamp
     self.last_hash = last_hash
     self.hash = hash
     self.data = data
@@ -26,9 +26,9 @@ class Block:
     )               
 
 def main():
-  block = Block('Block')
+  genesis_block = genesis()
+  block = mine_block(genesis_block, 'Start')
   print(block)
-  print(f'block.py __name__: {__name__}')
 
 if __name__ == '__main__':
   main()
