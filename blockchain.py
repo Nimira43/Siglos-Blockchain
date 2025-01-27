@@ -9,7 +9,7 @@ class Blockchain:
     self.chain.append(Block.mine_block(self.chain[-1], data))
 
   def __repr__(self):
-    return f'Blockchain: {self.chain}'
+    return f'SIGLOS BLOCKCHAIN: {self.chain}'
 
 def main():
   blockchain = Blockchain()
