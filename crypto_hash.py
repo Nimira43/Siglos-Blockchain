@@ -1,7 +1,7 @@
 import hashlib
 
 def crypto_hash(data):
-  return hashlib.sha256(data.encode('utf-8'))
+  return hashlib.sha256(data.encode('utf-8')).hexdigest()
 
 def main():
   print(f"crypto_hash('test): {crypto_hash('test')}")
