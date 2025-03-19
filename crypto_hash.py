@@ -1,14 +1,19 @@
 import hashlib
 import json
 
-def crypto_hash(data):
-  stringified_data = json.dumps(data)
+def crypto_hash(*args):
+  # stringified_data = json.dumps(data)
+  
+  print(f'args: {args}')
+  
+  joined_data = ''.join(args)
 
-  return hashlib.sha256(stringified_data.encode('utf-8')).hexdigest()
+  print(f'joined_data: {joined_data}')
+
+  return hashlib.sha256(joined_data.encode('utf-8')).hexdigest()
 
 def main():
-  print(f"crypto_hash(['tree', 5, 'five']): {crypto_hash(['tree', 5, 'five'])}")
+  print(f"crypto_hash('one', 'two', 'three'): {crypto_hash('one', 'two', 'three')}")
 
 if __name__ == '__main__':
-  
   main()
